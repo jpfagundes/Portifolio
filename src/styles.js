@@ -14,17 +14,32 @@ grid-template-areas:
 header {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-}
+  justify-content: space-between;
 
-h1, p {
-  text-align: center;
+  button {
+    background: none;
+    border: none;
+  }
+
+  
 }
 
 
 `;
 
 export const Content = styled.div`
+
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+
+}
+
+.banner {
+  padding: 40px;
+}
 
  .img-content {
   display: flex;
@@ -36,21 +51,55 @@ export const Content = styled.div`
   }
 }
 
-.text-content{
+.title{
   display: flex;
   flex-direction: column;
+  text-align: center;
 
-  gap: 20px;
+  margin-top: 2rem;
+  gap: 15px;
 
-  button {
-    color: ${({theme}) => theme.COLORS.WHITE};
-    background: #3A98B9;
-    border: none;
-    border-radius: 5px;
-    padding: 14px;
-    margin: 0 auto
+  h1 {
+    margin: 0;
+  }
+
+  h1, span {
+    font-size: 32px;
+  }
+
+
+}
+
+.buttons {
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  margin-top: 2rem;
+
+  a {
+    text-align: center;
+  }
+
+
+  :nth-child(1) {
+    color: #000;
+    background: ${({theme}) => theme.COLORS.BLUE};
+    padding: 0.625rem 1.25rem;
+    border-radius: 1.25rem;    
+
+  }
+
+  :nth-child(2) {
+    color: #fff;
+    background: none;
+    border: 1px solid #14FFEC;
+    border-radius: 1.25rem;
+    padding: 0.625rem 1.25rem;
   }
 }
+
 
 
 `;

@@ -1,9 +1,8 @@
 import { Container, Content } from './styles';
 import ProfilePic from "./assets/images/profile-pic.png";
-import Hamburger from "hamburger-react";
+import {Spin as Hamburger} from "hamburger-react";
 import { useState } from 'react';
-
-
+import { FaRegSun } from 'react-icons/fa';
 
 export function App() {
 
@@ -17,40 +16,45 @@ export function App() {
         class="menu"
         toggled={isOpen} 
         toggle={setOpen}
-        color="#FFF6E0"
+        color="#14FFEC"
         size ={25}
         rounded
         />
 
+        <h2>Portifólio</h2>
+
+        <button>
+          <FaRegSun size={25} color="#14FFEC"/>
+        </button>
+
       </header>
 
       <Content>
+        <section id="about">
+          <div className="container">
+            <div className="banner">
+              <div className="img-content">
+                <img src={ ProfilePic } alt="" />
+              </div>
+
+              <div className="intro">
+                <div className="title">
+                  <h1>Olá, eu sou o</h1>
+                  <span>João Pedro <br /> :)</span>
+                  <p>Desenvolvedor FullStack</p>
+                </div>
+              </div>
+
+              <div className="buttons">
+                <a href="assets/cv/cv-joao-pedro.pdf">Download CV</a>
+                <a href="mailto:jpsafagundes@hotmail.com">Entrar em contato</a>
+              </div>
+
+            </div>
+          </div>
 
 
-        <div className="img-content">
-          <img src={ ProfilePic } alt="" />
-        </div>
-
-
-        <div className="text-content">
-          <h1>Olá! Eu sou João Pedro, Desenvolvedor Fullstack.</h1>
-
-          <p>Formado em Análise e Desenvolvimento de Sistemas, atuo no
-            mercado como um desenvolvedor full stack júnior altamente
-            qualificado na criação de aplicativos da web de alta
-            qualidade. Especializado em ReactJS, NodeJS,
-            desenvolvimento front-end e back-end. Minha maior paixão
-            é aprender novas tecnologias e solucionar problemas
-            complexos. Meu principal objetivo é sempre fornecer
-            soluções inovadoras e eficazes que atendam às
-            necessidades dos clientes e dos usuários finais.
-          </p>
-
-          <button>
-            Baixar Currículo
-          </button>
-
-        </div>
+        </section>
         </Content>
 
     </Container>
