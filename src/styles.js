@@ -38,6 +38,12 @@ margin-left: auto;
 margin-right: auto;
 
 
+  p {
+    color: #828282;
+  }
+    
+
+
 
 #about {
   display: flex;
@@ -51,6 +57,7 @@ margin-right: auto;
   .banner {
     display: flex;
     justify-content: space-between;
+    flex-direction: column-reverse;
     padding: 40px;
   }
 
@@ -90,9 +97,11 @@ margin-right: auto;
 
 
     img {
+      width: 75%;
+      height: 75%;
       border-radius: 50% 50% 19% 81% / 58% 45% 55% 42%;
-      background: radial-gradient(circle, rgba(7,0,119,1) 15%, rgba(0,0,255,1) 35%, rgba(0,237,255,1) 55%);
-      cursor: pointer;
+      background: rgb(108,214,54);
+      background: radial-gradient(circle, rgba(108,214,54,1) 0%, rgba(19,31,23,1) 100%);      cursor: pointer;
       animation: scaleDelayed 1s 6.5s;
       max-width: 100%;
       transition: 0.2s;
@@ -104,7 +113,8 @@ margin-right: auto;
   .buttons {
 
     display: flex;
-    gap: 2rem;
+    flex-direction: column;
+    gap: 1rem;
     margin-top: 2rem;
 
     a {
@@ -114,8 +124,8 @@ margin-right: auto;
 
     :nth-child(1) {
       color: #fff;
-      background: rgb(0,105,145);
-      background: linear-gradient(90deg, rgba(0,105,145,1) 0%, rgba(2,55,197,1) 32%);
+      background: rgb(60,168,5);
+      background: linear-gradient(90deg, rgba(60,168,5,1) 95%, rgba(31,219,30,1) 100%);
       padding: 0.625rem 1.25rem;
       border-radius: 1.25rem;    
 
@@ -124,7 +134,7 @@ margin-right: auto;
     :nth-child(2) {
       color: #fff;
       background: none;
-      border: 1px solid #14FFEC;
+      border: 1px solid #6cd636;
       border-radius: 1.25rem;
       padding: 0.625rem 1.25rem;
     }
@@ -149,13 +159,25 @@ margin-right: auto;
 
 #skills {
 
-  h2 {
+  h2, span {
     text-align: center;
   }
 
   .cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    
+  }
+}
+
+#projects {
+
+  h2 {
+    text-align: center;
+  }
+}
+
+#contact {
+  h2 {
+    text-align: center;
   }
 }
 

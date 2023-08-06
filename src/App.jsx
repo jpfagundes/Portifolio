@@ -1,11 +1,14 @@
 import { Container, Content } from './styles';
 import ProfilePic from "./assets/images/prof.png";
 import {Spin as Hamburger} from "hamburger-react";
-import { useState } from 'react';
-import { FaNodeJs, FaRegSun } from 'react-icons/fa';
-import { DiCss3, DiHtml5, DiReact } from "react-icons/di";
+import { Fragment, useState } from 'react';
+import { FaNodeJs, FaRegMoon, FaRegSun, FaWordpress } from 'react-icons/fa';
+import { DiCss3, DiHtml5, DiReact, DiSqllite } from "react-icons/di";
 import { SiJavascript, SiStyledcomponents } from "react-icons/si";
+import { AiOutlineGithub, AiOutlineLinkedin, AiOutlineMail, AiOutlinePhone } from "react-icons/ai";
 import { Skill } from './components/Skill';
+import { Project } from './components/Project';
+import { IconContact } from './components/IconContact';
 
 export function App() {
 
@@ -19,7 +22,7 @@ export function App() {
         class="menu"
         toggled={isOpen} 
         toggle={setOpen}
-        color="#14FFEC"
+        color="#6cd636"
         size ={25}
         rounded
         />
@@ -27,7 +30,7 @@ export function App() {
         <h2>Portifólio</h2>
 
         <button>
-          <FaRegSun size={25} color="#14FFEC"/>
+          <FaRegMoon size={25} color="#6cd636"/>
         </button>
 
       </header>
@@ -110,14 +113,88 @@ export function App() {
             icon={<FaNodeJs/>}
             />
 
-            
+            <Skill 
+            title="WordPress"
+            icon={<FaWordpress />}
+            />
 
+          </div>
+        </section>
+
+        <section id="projects">
+          <h2>Projetos</h2>
+          <Project 
+          title="Food Explorer"
+          icon={<Fragment>
+            <DiHtml5 />
+            <DiCss3 />
+            <SiJavascript/>
+            <DiReact/>
+            <SiStyledcomponents/>
+            <FaNodeJs/>
+            <DiSqllite />
+          </Fragment>}
+          />
+
+          <Project 
+          title="Find A Friend"
+          icon={<Fragment>
+            <DiHtml5 />
+            <DiCss3 />
+            <SiJavascript/>
+          </Fragment>}
+          />
+
+          <Project 
+          title="Weather App"
+          icon={<Fragment>
+            <DiHtml5 />
+            <DiCss3 />
+            <SiJavascript/>
+          </Fragment>}
+          />
+
+          <Project 
+          title="Focus Timer"
+          icon={<Fragment>
+            <DiHtml5 />
+            <DiCss3 />
+            <SiJavascript/>
+          </Fragment>}
+          />
+        </section>
+
+        <section id="contact">
+          <h2>Contato</h2>
+          <div className="contacts">
+            <IconContact 
+            icon={<AiOutlineMail />}
+            title="E-mail"
+            info="jpsafagundes@hotmail.com"
+            />
+
+            <IconContact 
+            icon={<AiOutlinePhone />}
+            title="Telefone"
+            info="(88) 9.9417-3552"
+            />
+
+            <IconContact 
+            icon={<AiOutlineLinkedin />}
+            title="LinkedIn"
+            info="@jpfagundes"
+            />
+
+            <IconContact 
+            icon={<AiOutlineGithub />}
+            title="Github"
+            info="@jpfagundes"
+            />
           </div>
         </section>
 
 
         </Content>
-
     </Container>
   )
 }

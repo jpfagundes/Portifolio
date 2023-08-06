@@ -8,12 +8,12 @@ export default createGlobalStyle`
     }
 
     body {
-        background-color: ${({theme}) => theme.COLORS.BACKGROUND_DARK};
-        color: ${({theme}) => theme.COLORS.BLUE};
+        background-color: ${({theme}) => theme.COLORS.BACKGROUND};
+        color: ${({theme}) => theme.COLORS.GREEN};
         font-family: 'Heebo', sans-serif;
         -webkit-font-smoothing: antialiased;
     }
-    
+
     body, input, button, textarea {
     font-size: 16px;
     outline: none;
