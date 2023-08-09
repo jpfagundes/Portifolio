@@ -8,12 +8,24 @@ export default createGlobalStyle`
     }
 
     body {
-        background-color: ${({theme}) => theme.COLORS.BACKGROUND};
+        background-color: ${({theme}) => theme.COLORS.BACKGROUND_DARK};
         color: ${({theme}) => theme.COLORS.GREEN};
         font-family: 'Heebo', sans-serif;
         -webkit-font-smoothing: antialiased;
-    }
 
+    .light-mode {
+
+        h1, h2,
+        .buttons :nth-child(2),
+        .contacts p,
+        .contacts span
+        {
+            color: #000 !important;
+        }
+        background-color: #fff;
+    }
+    }
+    
     body, input, button, textarea {
     font-size: 16px;
     outline: none;

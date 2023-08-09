@@ -14,8 +14,14 @@ export function App() {
 
   const [isOpen, setOpen ] = useState(false)
 
+  const [isDarkMode, setIsDarkMode] = useState(true);
+
+  function toggleMode() {
+    setIsDarkMode(prevMode => !prevMode)
+  };
+
   return (
-    <Container>
+    <Container >
 
       <header>
         <Hamburger 
@@ -23,19 +29,19 @@ export function App() {
         toggled={isOpen} 
         toggle={setOpen}
         color="#6cd636"
-        size ={25}
+        size ={20}
         rounded
         />
 
         <h2>Portifólio</h2>
 
-        <button>
-          <FaRegMoon size={25} color="#6cd636"/>
+        <button onClick={toggleMode}>
+          <FaRegMoon size={20} color="#6cd636" className='moon-button'/>
         </button>
 
       </header>
 
-      <Content>
+      <Content className = {isDarkMode ? 'dark-mode' : 'light-mode'}>
         <section id="about">
           <div className="banner">
             <div className="intro">

@@ -4,14 +4,22 @@ export const Container = styled.div`
   background: #212121;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   border-top-left-radius: 2.5rem;
 
 
-  svg {
-    width: 50px;
-    height: 50px;
+  span {
+    margin-top: 5px;
+  }
+
+  .icon {
+    margin: 5px 0;
+
+    svg {
+      width: 50px;
+      height: 50px;
+    }
   }
 
   .bar {
