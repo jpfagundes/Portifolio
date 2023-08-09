@@ -13,6 +13,10 @@ export default createGlobalStyle`
         font-family: 'Heebo', sans-serif;
         -webkit-font-smoothing: antialiased;
 
+        h2 {
+            color: #fff
+        }
+
     .light-mode {
 
         h1, h2,

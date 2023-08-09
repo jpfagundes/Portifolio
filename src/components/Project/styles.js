@@ -18,8 +18,11 @@ export const Container = styled.div`
   }
     
   .bar {
+    display: block;
     width: 100%;
-    border: 1px solid;
-    background: #6cd636;
+    height: 2px;
+    background-image: linear-gradient(90deg, #6cd636 0%, #1c482b 92.32%);
+    bottom: -1px;
+    left: 0;
   }
 `;
