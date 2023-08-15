@@ -20,11 +20,56 @@ header {
   justify-content: space-between;
   padding: 0 16px;
   background: ${({theme}) => theme.COLORS.BACKGROUND_DARK};
-
-
   
   h2 {
       color: #fff !important;
+    }
+
+    .menu-disabled {
+      display: none;
+    }
+
+
+
+    .menu-active {
+      position: fixed;
+      background-color: rgba(0, 0, 0, 0.65);
+      backdrop-filter: blur(10px);
+      width: 100%;
+      height: 100vh;
+      top: 50px;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 70px;
+
+      h2 {
+        font-size: 22px;
+      }
+
+      #title-light-mode {
+        color: #6cd636 !important;
+      }
+
+
+      nav {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        font-size: 2rem;
+        flex-direction: column;
+        padding-top: 100px;
+        gap: 50px;
+
+        a {
+        color: #f9f9f9;
+        }
+      }
+
+
     }
 }
 button {

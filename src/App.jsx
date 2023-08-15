@@ -12,36 +12,60 @@ import { IconContact } from './components/IconContact';
 
 export function App() {
 
-  const [isOpen, setOpen ] = useState(false)
+  const [isOpen, SetIsOpen ] = useState(false)
 
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const [isLightMode, setIsLightMode] = useState(true);
 
   function toggleMode() {
-    setIsDarkMode(prevMode => !prevMode)
+    setIsLightMode(prevMode => !prevMode)
   };
+
+  function toggleMenu(){
+    SetIsOpen(prevMode => !prevMode)
+
+  }
 
   return (
     <Container >
 
       <header>
-        <Hamburger 
-        class="menu"
+        {<div className="menu">
+        <Hamburger onClick={toggleMenu}
         toggled={isOpen} 
-        toggle={setOpen}
+        toggle={SetIsOpen}
         color="#6cd636"
         size ={20}
         rounded
         />
 
+        <div className={isOpen ? 'menu-active' : 'menu-disabled'}>
+          <h2 id={isLightMode ? 'title-light-mode' : 'title-dark-mode' }>Bem vindo ao meu Portfólio :)</h2>
+
+          <nav>
+            <a href="#about">Sobre</a>
+            <a href="#skills">Habilidades</a>
+            <a href="#projects">Projetos</a>
+            <a href="#contact">Contatos</a>
+
+          </nav>
+        </div>
+
+        </div>
+        }
+
         <h2>Portifólio</h2>
 
         <button onClick={toggleMode}>
-          <FaRegMoon size={20} color="#6cd636" className='moon-button'/>
+          {isLightMode ? 
+            (<FaRegMoon size={20} color="#6cd636"/>) 
+            : 
+            (<FaRegSun size={20} color="#6cd636"/>) 
+          }
         </button>
 
       </header>
 
-      <Content className = {isDarkMode ? 'dark-mode' : 'light-mode'}>
+      <Content className = {isLightMode ? 'light-mode' : 'dark-mode'}>
         <section id="about">
           <div className="banner">
             <div className="intro">
