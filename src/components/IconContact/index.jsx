@@ -1,6 +1,6 @@
 import { Container } from "./styles";
 
-export function IconContact ({icon, title, info}) {
+export function IconContact ({icon, title, info, ...rest}) {
   return (
     <Container>
       <a>{icon ? icon : null}</a>

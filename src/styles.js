@@ -20,6 +20,8 @@ header {
   justify-content: space-between;
   padding: 0 16px;
   background: ${({theme}) => theme.COLORS.BACKGROUND_DARK};
+  z-index: 1;
+
   
   h2 {
       color: #fff !important;
@@ -87,6 +89,7 @@ header::after {
     bottom: -2px;
     left: 0;
 
+
   }
 
 
@@ -101,7 +104,7 @@ width: 100%;
 padding: 16px;
 
   p {
-    color: #828282;
+    color: #6e6e6e;
   }
     
 
@@ -208,6 +211,7 @@ padding: 16px;
   flex-direction: column;
   align-items: center;
   gap: 2rem;
+  padding-bottom: 50px;
 
   p {
     line-height: 180%;
@@ -225,21 +229,53 @@ padding: 16px;
     text-align: center;
   }
 
+  h2 {
+    margin-bottom: 32px;
+  }
+
   .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
     
   }
 }
 
 #projects {
 
+  .cards-projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+    
+
+  }
+
+  margin: 50px 0 50px 0;
+
   h2 {
     text-align: center;
+    margin-bottom: 32px;
   }
 }
 
 #contact {
   h2 {
     text-align: center;
+    margin-bottom: 32px;
+
+  }
+
+  .contacts {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;;
+    justify-content: space-evenly;
+    gap: 50px;
   }
 }
 

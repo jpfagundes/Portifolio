@@ -27,6 +27,7 @@ a {
 
   p {
     color: #fff;
+    margin: 8px
   }
 
   span {

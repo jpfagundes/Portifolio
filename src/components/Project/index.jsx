@@ -1,12 +1,16 @@
 import { Container } from "./styles";
 
-export function Project({title, icon, img}){
+export function Project({title, icon, background}){
   return (
     <Container>
-      <span>{title}</span>
-      <div className="icons">{icon ? icon : null}</div>
-      {img ? img : null}
-      <div className="bar"></div>
+      <div className="box" style={{backgroundImage: `url(${background})`}}>
+        
+        <div className="details">
+          <span>{title}</span>
+          <div className="icons">{icon ? icon : null}</div>
+          <div className="bar"></div>
+        </div>
+      </div>
 
     </Container>
   );

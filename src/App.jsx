@@ -2,7 +2,7 @@ import { Container, Content } from './styles';
 import ProfilePic from "./assets/images/prof.png";
 import {Spin as Hamburger} from "hamburger-react";
 import { Fragment, useState } from 'react';
-import { FaNodeJs, FaRegMoon, FaRegSun, FaWordpress } from 'react-icons/fa';
+import { FaFigma, FaNodeJs, FaRegMoon, FaRegSun, FaWordpress } from 'react-icons/fa';
 import { DiCss3, DiHtml5, DiReact, DiSqllite } from "react-icons/di";
 import { SiJavascript, SiStyledcomponents } from "react-icons/si";
 import { AiOutlineGithub, AiOutlineLinkedin, AiOutlineMail, AiOutlinePhone } from "react-icons/ai";
@@ -134,7 +134,7 @@ export function App() {
             />
 
             <Skill 
-            title="Styled Components"
+            title="CSS-in-JS"
             icon={<SiStyledcomponents />}
             />
 
@@ -148,50 +148,60 @@ export function App() {
             icon={<FaWordpress />}
             />
 
+            <Skill 
+            title="Figma"
+            icon={<FaFigma/>}
+
+            />
+
           </div>
         </section>
 
         <section id="projects">
           <h2>Projetos</h2>
-          <Project 
-          title="Food Explorer"
-          icon={<Fragment>
-            <DiHtml5 />
-            <DiCss3 />
-            <SiJavascript/>
-            <DiReact/>
-            <SiStyledcomponents/>
-            <FaNodeJs/>
-            <DiSqllite />
-          </Fragment>}
-          />
 
-          <Project 
-          title="Find A Friend"
-          icon={<Fragment>
-            <DiHtml5 />
-            <DiCss3 />
-            <SiJavascript/>
-          </Fragment>}
-          />
+          <div className="cards-projects">
+            <Project 
+            title="Food Explorer"
+            background={"./assets/images/food-explorer.png"}
+            icon={<Fragment>
+              <DiHtml5 />
+              <DiCss3 />
+              <SiJavascript/>
+              <DiReact/>
+              <SiStyledcomponents/>
+              <FaNodeJs/>
+              <DiSqllite />
+            </Fragment>}
+            />
 
-          <Project 
-          title="Weather App"
-          icon={<Fragment>
-            <DiHtml5 />
-            <DiCss3 />
-            <SiJavascript/>
-          </Fragment>}
-          />
+            <Project 
+            title="Find A Friend"
+            icon={<Fragment>
+              <DiHtml5 />
+              <DiCss3 />
+              <SiJavascript/>
+            </Fragment>}
+            />
 
-          <Project 
-          title="Focus Timer"
-          icon={<Fragment>
-            <DiHtml5 />
-            <DiCss3 />
-            <SiJavascript/>
-          </Fragment>}
-          />
+            <Project 
+            title="Weather App"
+            icon={<Fragment>
+              <DiHtml5 />
+              <DiCss3 />
+              <SiJavascript/>
+            </Fragment>}
+            />
+
+            <Project 
+            title="Focus Timer"
+            icon={<Fragment>
+              <DiHtml5 />
+              <DiCss3 />
+              <SiJavascript/>
+            </Fragment>}
+            />
+          </div>
         </section>
 
         <section id="contact">
