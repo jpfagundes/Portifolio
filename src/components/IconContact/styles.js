@@ -18,6 +18,7 @@ a {
   border-radius: 100%;
 
   svg {
+    color: #6cd636;
     height: 32px;
     width: 32px;
   }

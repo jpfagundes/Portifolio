@@ -9,6 +9,8 @@ import { AiOutlineGithub, AiOutlineLinkedin, AiOutlineMail, AiOutlinePhone } fro
 import { Skill } from './components/Skill';
 import { Project } from './components/Project';
 import { IconContact } from './components/IconContact';
+import FoodExplorer from '././assets/images/food-explorer.png';
+import FocusTimer from '././assets/images/focus-timer.png';
 
 export function App() {
 
@@ -163,7 +165,7 @@ export function App() {
           <div className="cards-projects">
             <Project 
             title="Food Explorer"
-            background={"./assets/images/food-explorer.png"}
+            background= "./assets/images/focus-timer.png"
             icon={<Fragment>
               <DiHtml5 />
               <DiCss3 />
@@ -177,6 +179,7 @@ export function App() {
 
             <Project 
             title="Find A Friend"
+            background={<FoodExplorer />}
             icon={<Fragment>
               <DiHtml5 />
               <DiCss3 />
@@ -195,6 +198,7 @@ export function App() {
 
             <Project 
             title="Focus Timer"
+            background="./assets/images/focus-timer.png"
             icon={<Fragment>
               <DiHtml5 />
               <DiCss3 />
@@ -207,29 +211,37 @@ export function App() {
         <section id="contact">
           <h2>Contato</h2>
           <div className="contacts">
-            <IconContact 
-            icon={<AiOutlineMail />}
-            title="E-mail"
-            info="jpsafagundes@hotmail.com"
+            <a href="mailto:jpsafagundes@hotmail.com">
+              <IconContact 
+              icon={<AiOutlineMail />}
+              title="E-mail"
+              info="jpsafagundes@hotmail.com"
             />
+            </a>
 
-            <IconContact 
-            icon={<AiOutlinePhone />}
-            title="Telefone"
-            info="(88) 9.9417-3552"
-            />
+            <a href="tel:+5588994173552">
+              <IconContact 
+              icon={<AiOutlinePhone />}
+              title="Telefone"
+              info="(88) 9.9417-3552"
+              />
+            </a>
 
-            <IconContact 
-            icon={<AiOutlineLinkedin />}
-            title="LinkedIn"
-            info="@jpfagundes"
-            />
+            <a href="https://linkedin.com/in/jpfagundes" target='blank'>
+              <IconContact 
+              icon={<AiOutlineLinkedin />}
+              title="LinkedIn"
+              info="@jpfagundes"
+              />
+            </a>
 
-            <IconContact 
-            icon={<AiOutlineGithub />}
-            title="Github"
-            info="@jpfagundes"
-            />
+            <a href="https://github.com/jpfagundes" target='blank'>
+              <IconContact 
+              icon={<AiOutlineGithub />}
+              title="Github"
+              info="@jpfagundes"
+              />
+            </a>
           </div>
         </section>
 

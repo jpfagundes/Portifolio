@@ -31,8 +31,6 @@ header {
       display: none;
     }
 
-
-
     .menu-active {
       position: fixed;
       background-color: rgba(0, 0, 0, 0.65);
@@ -88,12 +86,7 @@ header::after {
     background-image: linear-gradient(90deg, #6cd636 0%, #1c482b 92.32%);
     bottom: -2px;
     left: 0;
-
-
   }
-
-
-
 `;
 
 export const Content = styled.div`
@@ -106,18 +99,10 @@ padding: 16px;
   p {
     color: #6e6e6e;
   }
-    
-
-
 
 #about {
   display: flex;
   flex-direction: column;
-
-  .container {
-
-
-  }
 
   .banner {
     display: flex;
@@ -149,7 +134,6 @@ padding: 16px;
       font-size: 32px;
     }
 
-
   }
   .profile {
     display: flex;
@@ -160,23 +144,20 @@ padding: 16px;
       width: 100%;
     }
 
-
     img {
-      width: 75%;
-      height: 75%;
+      max-width: 60%;
+      max-height: 60%;
       border-radius: 50% 50% 19% 81% / 58% 45% 55% 42%;
       background: rgb(108,214,54);
-      background: radial-gradient(circle, rgba(108,214,54,1) 0%, rgba(19,31,23,1) 100%);      cursor: pointer;
+      background: radial-gradient(circle, rgba(108,214,54,1) 0%, rgba(19,31,23,1) 100%);      
+      cursor: pointer;
       animation: scaleDelayed 1s 6.5s;
-      max-width: 100%;
       transition: 0.2s;
-
-  }
+    }
   }
 
 
   .buttons {
-
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -186,14 +167,12 @@ padding: 16px;
       text-align: center;
     }
 
-
     :nth-child(1) {
       color: #fff;
       background: rgb(60,168,5);
       background: linear-gradient(90deg, rgba(60,168,5,1) 95%, rgba(31,219,30,1) 100%);
       padding: 0.625rem 1.25rem;
-      border-radius: 1.25rem;    
-
+      border-radius: 1.25rem;
     }
 
     :nth-child(2) {
@@ -202,6 +181,10 @@ padding: 16px;
       border: 1px solid #6cd636;
       border-radius: 1.25rem;
       padding: 0.625rem 1.25rem;
+    }
+
+    :hover {
+      transform: scale(0.95);
     }
   }
 }
@@ -277,6 +260,65 @@ padding: 16px;
     justify-content: space-evenly;
     gap: 50px;
   }
+
+  a {
+    :hover {
+      transform: scale(1.1);
+      transition: filter 0.3s;
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  #about{
+    .banner {
+      flex-direction: row;
+
+      padding-left: 90px;
+
+      h1,span {
+        font-size: 40px;
+        text-align: initial;
+      } 
+
+      p {
+        font-size: 24px;
+        text-align: initial;
+      }
+
+      .intro {
+        width: 55%;
+        align-items: flex-start;
+
+      }
+
+      .profile {
+        justify-content: center;
+
+        img {
+          max-width: 85%;
+          max-height: 85%;
+        }
+      }
+
+      .buttons {
+        flex-direction: row;
+        justify-content: center;
+
+        a {
+          padding: 10px;
+        }
+      }
+
+    }
+    .about-me {
+      p {
+        width: 60%;
+
+      }
+    }
+  }
+  
 }
 
 

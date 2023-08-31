@@ -1,12 +1,11 @@
 import { styled } from "styled-components";
 
 export const Container = styled.div`
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
 
 .box {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  
   display: flex;
   flex-direction: column;
   text-align: center;
